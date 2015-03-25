@@ -314,7 +314,7 @@ angular.module('lumx.dropdown', [])
         return {
             restrict: 'E',
             controller: 'LxDropdownController',
-            templateUrl: 'dropdown.html',
+            templateUrl: './includes/modules/dropdown/views/dropdown.html',
             transclude: true,
             replace: true,
             scope: {
@@ -334,7 +334,7 @@ angular.module('lumx.dropdown', [])
         return {
             restrict: 'A',
             require: '^lxDropdown',
-            templateUrl: 'dropdown-toggle.html',
+            templateUrl: './includes/modules/dropdown/views/dropdown-toggle.html',
             replace: true,
             transclude: true,
             link: function(scope, element, attrs, ctrl)
@@ -356,7 +356,7 @@ angular.module('lumx.dropdown', [])
         return {
             restrict: 'E',
             require: '^lxDropdown',
-            templateUrl: 'dropdown-menu.html',
+            templateUrl: './includes/modules/dropdown/views/dropdown-menu.html',
             transclude: true,
             replace: true,
             link: function(scope, element, attrs, ctrl)

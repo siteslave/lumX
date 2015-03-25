@@ -29,7 +29,8 @@ var paths = {
         '!demo/scss'
     ],
     examples: [
-        'modules/**/demo/**/*.html'
+        'modules/**/demo/**/*.html',
+        'modules/**/views/**/*.html'
     ],
     libs: [
         'libs/**/*'
@@ -108,7 +109,7 @@ gulp.task('examples', function()
         .pipe(plugins.plumber())
         .pipe(plugins.rename(function(path)
         {
-            path.dirname = path.dirname.replace('/demo', '');
+            path.dirname = path.dirname.replace('demo', '');
         }))
         .pipe(gulp.dest('build/includes/modules'));
 });
